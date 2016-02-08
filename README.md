@@ -48,6 +48,23 @@ Given the hash above, complete the following:
 ### Your HTML form here:
 
 ```html
+<form action="/users/create" method="post">
+    <input name="utf8" type="hidden" value="✓">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label for="user_username">Username:</label>
+    <input type="text" id="user_username" name="user[username]">
+
+    <label for="user_password">Email:</label>
+    <input type="text" id="user_email" name="user[email]">
+
+    <label for="user_password">Password</label>
+    <input type="password" id="user_password" name="user[password]">
+
+    <label for="user_password_confirm">Password Confirmation</label>
+    <input type="password" id="user_password_confirm" name="user[password_confirm]">
+    <input type="submit" value="Create User">
+</form>
 ```
 
 
@@ -168,7 +185,3 @@ The [Faker gem](https://github.com/stympy/faker) has been provided for you to ma
 
 
 ## Good Luck!
-
-
-
-
