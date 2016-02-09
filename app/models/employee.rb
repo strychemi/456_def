@@ -4,5 +4,5 @@ class Employee < ActiveRecord::Base
 
   has_many :progress_reports
 
-  has_many :owned_teams, class_name: "Team", foreign_key: :user_id
+  has_many :owned_teams, class_name: "Team", source: :owner
 end
