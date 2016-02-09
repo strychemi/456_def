@@ -26,12 +26,9 @@ ActiveRecord::Schema.define(version: 20160208171414) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "employees", ["team_id"], name: "index_employees_on_team_id"
 
   create_table "progress_reports", force: :cascade do |t|
     t.text     "body"

@@ -1,8 +1,8 @@
 class Team < ActiveRecord::Base
-  #belongs_to :employee
-  #belongs_to :owner, through: :employees, foreign_key: :employee_id
+  belongs_to :owner, class_name: "Employee"
 
-  belongs_to :owner
-  has_many :members, through: :employees, foreign_key: :team_id
+  has_many :employee_teams
+  has_many :members, through: :employee_teams, source: :employee
+
   has_many :progress_reports
 end
